@@ -37,7 +37,8 @@
     "@teamscala/session-contracts": "*",
     "@teamscala/signal-shutdown": "*",
     "@teamscala/tmux-session": "*",
-    "@teamscala/cli-protocol": "*"
+    "@teamscala/cli-protocol": "*",
+    "@teamscala/cli-session": "*"
   },
   "devDependencies": {
     "bun-types": "*",
