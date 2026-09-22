@@ -37,7 +37,6 @@ afterAll(() => restoreMockedModules());
 mock.module("./query-options.ts", () => ({
   queryActiveOptions: async () => [],
 }));
-));
 
 const { startChannelDaemonDetached } = await import("./channel-daemon.ts");
 const deps = { spawn: spawnMock, log: testLog };

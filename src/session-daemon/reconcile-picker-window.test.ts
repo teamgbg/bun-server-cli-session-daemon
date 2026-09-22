@@ -28,7 +28,6 @@ mock.module("./reconcile.ts", () => ({
 		reconciled.push(session);
 	},
 }));
-));
 
 await mockModuleRestorable("@teamscala/tmux-session/session/list-sessions", (real) => ({
 	...real,

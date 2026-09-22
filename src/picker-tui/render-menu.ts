@@ -65,39 +65,6 @@ function renderBox(title: string, width: number, lines: RenderLine[]): RenderLin
 	return [top, ...body, bottom];
 }
 
-}
-
-function padRightAnsi(text: string, width: number): string {
-	return `${text}${" ".repeat(Math.max(0, width - visibleLen(text)))}`;
-}
-
-interface RenderLine {
-	text: string;
-	optIdx?: number;
-}
-
-function renderBox(title: string, width: number, lines: RenderLine[]): RenderLine[] {
-	const boxWidth = Math.max(12, width);
-	const inner = boxWidth - 4;
-	const titleText = ` ${title} `;
-	const titleWidth = Math.min(inner, titleText.length);
-	const leftRule = Math.max(0, Math.floor((boxWidth - 2 - titleWidth) / 2));
-	const rightRule = Math.max(0, boxWidth - 2 - titleWidth - leftRule);
-	const label = titleWidth < titleText.length ? titleText.slice(0, titleWidth) : titleText;
-	const top: RenderLine = {
-		text:
-			`${AMBER_BRIGHT}╭${"─".repeat(leftRule)}${RESET}` +
-			`${BOLD}${FG}${label}${RESET}` +
-			`${AMBER_BRIGHT}${"─".repeat(rightRule)}╮${RESET}`,
-	};
-	const body = lines.map((line) => ({
-		text: `${AMBER_BRIGHT}│${RESET} ${padRightAnsi(line.text, inner)} ${AMBER_BRIGHT}│${RESET}`,
-		optIdx: line.optIdx,
-	}));
-	const bottom: RenderLine = { text: `${AMBER_BRIGHT}╰${"─".repeat(boxWidth - 2)}╯${RESET}` };
-	return [top, ...body, bottom];
-}
-
 function renderMenu(state: AppState & { kind: "menu" }, config: PickerConfig): string {
 	const cols = termCols();
 	const level = state.stack[state.stack.length - 1];
