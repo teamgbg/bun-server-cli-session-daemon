@@ -18,8 +18,8 @@ import type {
 	StdioAppServerConfig,
 	TransportHandle,
 } from "@teamscala/session-contracts/types";
-import { createStdioAcpTransport } from "#cli-session/transports/stdio-acp.ts";
-import { createStdioAppServerTransport } from "#cli-session/transports/stdio-app-server.ts";
+import { createStdioAcpTransport } from "@teamscala/cli-protocol/transports/stdio-acp";
+import { createStdioAppServerTransport } from "@teamscala/cli-protocol/transports/stdio-app-server";
 import {
 	startVisibleFleetControl,
 	type AssignmentComment,
