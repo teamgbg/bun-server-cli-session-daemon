@@ -93,14 +93,6 @@
       "types": "./src/picker-tui/client-version.d.ts",
       "default": "./src/picker-tui/client-version.ts"
     },
-    "./picker-tui/launcher": {
-      "types": "./src/picker-tui/launcher.d.ts",
-      "default": "./src/picker-tui/launcher.ts"
-    },
-    "./picker-tui/launcher.ts": {
-      "types": "./src/picker-tui/launcher.d.ts",
-      "default": "./src/picker-tui/launcher.ts"
-    },
     "./picker-tui/launcher-entry": {
       "types": "./src/picker-tui/launcher-entry.d.ts",
       "default": "./src/picker-tui/launcher-entry.ts"
@@ -148,14 +140,6 @@
     "./picker-tui/screen-renderer.ts": {
       "types": "./src/picker-tui/screen-renderer.d.ts",
       "default": "./src/picker-tui/screen-renderer.ts"
-    },
-    "./picker-tui/session-select": {
-      "types": "./src/picker-tui/session-select.d.ts",
-      "default": "./src/picker-tui/session-select.ts"
-    },
-    "./picker-tui/session-select.ts": {
-      "types": "./src/picker-tui/session-select.d.ts",
-      "default": "./src/picker-tui/session-select.ts"
     },
     "./picker-tui/session-select-entry": {
       "types": "./src/picker-tui/session-select-entry.d.ts",
@@ -429,14 +413,6 @@
       "types": "./src/session-daemon/source-adapter-core.d.ts",
       "default": "./src/session-daemon/source-adapter-core.ts"
     },
-    "./session-daemon/spawn-core": {
-      "types": "./src/session-daemon/spawn-core.d.ts",
-      "default": "./src/session-daemon/spawn-core.ts"
-    },
-    "./session-daemon/spawn-core.ts": {
-      "types": "./src/session-daemon/spawn-core.d.ts",
-      "default": "./src/session-daemon/spawn-core.ts"
-    },
     "./session-daemon/spawn-ops": {
       "types": "./src/session-daemon/spawn-ops.d.ts",
       "default": "./src/session-daemon/spawn-ops.ts"
@@ -500,14 +476,6 @@
     "./session-daemon/state-config.ts": {
       "types": "./src/session-daemon/state-config.d.ts",
       "default": "./src/session-daemon/state-config.ts"
-    },
-    "./session-daemon/state-file": {
-      "types": "./src/session-daemon/state-file.d.ts",
-      "default": "./src/session-daemon/state-file.ts"
-    },
-    "./session-daemon/state-file.ts": {
-      "types": "./src/session-daemon/state-file.d.ts",
-      "default": "./src/session-daemon/state-file.ts"
     },
     "./session-daemon/state-tabs": {
       "types": "./src/session-daemon/state-tabs.d.ts",
