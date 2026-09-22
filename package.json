@@ -1,0 +1,573 @@
+{
+  "_generated": {
+    "system": "package-json@1.0.0",
+    "status": "generated",
+    "edit": "edit src/ \u2014 dependencies and exports derive from imports; everything else preserved"
+  },
+  "name": "@teamscala/cli-session-daemon",
+  "capability": "Session-picker daemon + picker TUI: orchestrates tmux-managed CLI panes, session selection UI, fleet lifecycle, and visible-fleet runtime.",
+  "tier": "server",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Session-picker daemon + picker TUI: orchestrates tmux-managed CLI panes, session selection UI, fleet lifecycle, and visible-fleet runtime.",
+  "sideEffects": false,
+  "imports": {
+    "#cli-session/*": "./src/*",
+    "#cli-session/*.ts": "./src/*.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "@teamscala/cache": "*",
+    "@teamscala/db": "*",
+    "@teamscala/db-validation": "*",
+    "@teamscala/encryption": "*",
+    "@teamscala/event-bus": "*",
+    "@teamscala/event-log": "*",
+    "@teamscala/logger": "*",
+    "@teamscala/mcp-client-pool": "*",
+    "@teamscala/notify-cache": "*",
+    "@teamscala/orpc": "*",
+    "@teamscala/os": "*",
+    "@teamscala/pane-inventory": "*",
+    "@teamscala/proc-walker": "*",
+    "@teamscala/retry": "*",
+    "@teamscala/safe-fallback": "*",
+    "@teamscala/session-contracts": "*",
+    "@teamscala/signal-shutdown": "*",
+    "@teamscala/tmux-session": "*",
+    "@teamscala/cli-protocol": "*"
+  },
+  "devDependencies": {
+    "bun-types": "*",
+    "@happy-dom/global-registrator": "*",
+    "@testing-library/react": "*"
+  },
+  "exports": {
+    "./bootstrap/restore-fleet-tail-state": {
+      "types": "./src/bootstrap/restore-fleet-tail-state.d.ts",
+      "default": "./src/bootstrap/restore-fleet-tail-state.ts"
+    },
+    "./bootstrap/restore-fleet-tail-state.ts": {
+      "types": "./src/bootstrap/restore-fleet-tail-state.d.ts",
+      "default": "./src/bootstrap/restore-fleet-tail-state.ts"
+    },
+    "./orchestrators/runtime/fleet-client": {
+      "types": "./src/orchestrators/runtime/fleet-client.d.ts",
+      "default": "./src/orchestrators/runtime/fleet-client.ts"
+    },
+    "./orchestrators/runtime/fleet-client.ts": {
+      "types": "./src/orchestrators/runtime/fleet-client.d.ts",
+      "default": "./src/orchestrators/runtime/fleet-client.ts"
+    },
+    "./orchestrators/runtime/fleet-client-entry": {
+      "types": "./src/orchestrators/runtime/fleet-client-entry.d.ts",
+      "default": "./src/orchestrators/runtime/fleet-client-entry.ts"
+    },
+    "./orchestrators/runtime/fleet-client-entry.ts": {
+      "types": "./src/orchestrators/runtime/fleet-client-entry.d.ts",
+      "default": "./src/orchestrators/runtime/fleet-client-entry.ts"
+    },
+    "./orchestrators/runtime/standalone-orpc": {
+      "types": "./src/orchestrators/runtime/standalone-orpc.d.ts",
+      "default": "./src/orchestrators/runtime/standalone-orpc.ts"
+    },
+    "./orchestrators/runtime/standalone-orpc.ts": {
+      "types": "./src/orchestrators/runtime/standalone-orpc.d.ts",
+      "default": "./src/orchestrators/runtime/standalone-orpc.ts"
+    },
+    "./orchestrators/runtime/visible-fleet-control": {
+      "types": "./src/orchestrators/runtime/visible-fleet-control.d.ts",
+      "default": "./src/orchestrators/runtime/visible-fleet-control.ts"
+    },
+    "./orchestrators/runtime/visible-fleet-control.ts": {
+      "types": "./src/orchestrators/runtime/visible-fleet-control.d.ts",
+      "default": "./src/orchestrators/runtime/visible-fleet-control.ts"
+    },
+    "./picker-tui/client-version": {
+      "types": "./src/picker-tui/client-version.d.ts",
+      "default": "./src/picker-tui/client-version.ts"
+    },
+    "./picker-tui/client-version.ts": {
+      "types": "./src/picker-tui/client-version.d.ts",
+      "default": "./src/picker-tui/client-version.ts"
+    },
+    "./picker-tui/launcher": {
+      "types": "./src/picker-tui/launcher.d.ts",
+      "default": "./src/picker-tui/launcher.ts"
+    },
+    "./picker-tui/launcher.ts": {
+      "types": "./src/picker-tui/launcher.d.ts",
+      "default": "./src/picker-tui/launcher.ts"
+    },
+    "./picker-tui/launcher-entry": {
+      "types": "./src/picker-tui/launcher-entry.d.ts",
+      "default": "./src/picker-tui/launcher-entry.ts"
+    },
+    "./picker-tui/launcher-entry.ts": {
+      "types": "./src/picker-tui/launcher-entry.d.ts",
+      "default": "./src/picker-tui/launcher-entry.ts"
+    },
+    "./picker-tui/named-launcher": {
+      "types": "./src/picker-tui/named-launcher.d.ts",
+      "default": "./src/picker-tui/named-launcher.ts"
+    },
+    "./picker-tui/named-launcher.ts": {
+      "types": "./src/picker-tui/named-launcher.d.ts",
+      "default": "./src/picker-tui/named-launcher.ts"
+    },
+    "./picker-tui/picker-config": {
+      "types": "./src/picker-tui/picker-config.d.ts",
+      "default": "./src/picker-tui/picker-config.ts"
+    },
+    "./picker-tui/picker-config.ts": {
+      "types": "./src/picker-tui/picker-config.d.ts",
+      "default": "./src/picker-tui/picker-config.ts"
+    },
+    "./picker-tui/picker-rpc": {
+      "types": "./src/picker-tui/picker-rpc.d.ts",
+      "default": "./src/picker-tui/picker-rpc.ts"
+    },
+    "./picker-tui/picker-rpc.ts": {
+      "types": "./src/picker-tui/picker-rpc.d.ts",
+      "default": "./src/picker-tui/picker-rpc.ts"
+    },
+    "./picker-tui/restore-ack": {
+      "types": "./src/picker-tui/restore-ack.d.ts",
+      "default": "./src/picker-tui/restore-ack.ts"
+    },
+    "./picker-tui/restore-ack.ts": {
+      "types": "./src/picker-tui/restore-ack.d.ts",
+      "default": "./src/picker-tui/restore-ack.ts"
+    },
+    "./picker-tui/screen-renderer": {
+      "types": "./src/picker-tui/screen-renderer.d.ts",
+      "default": "./src/picker-tui/screen-renderer.ts"
+    },
+    "./picker-tui/screen-renderer.ts": {
+      "types": "./src/picker-tui/screen-renderer.d.ts",
+      "default": "./src/picker-tui/screen-renderer.ts"
+    },
+    "./picker-tui/session-select": {
+      "types": "./src/picker-tui/session-select.d.ts",
+      "default": "./src/picker-tui/session-select.ts"
+    },
+    "./picker-tui/session-select.ts": {
+      "types": "./src/picker-tui/session-select.d.ts",
+      "default": "./src/picker-tui/session-select.ts"
+    },
+    "./picker-tui/session-select-entry": {
+      "types": "./src/picker-tui/session-select-entry.d.ts",
+      "default": "./src/picker-tui/session-select-entry.ts"
+    },
+    "./picker-tui/session-select-entry.ts": {
+      "types": "./src/picker-tui/session-select-entry.d.ts",
+      "default": "./src/picker-tui/session-select-entry.ts"
+    },
+    "./picker-tui/style": {
+      "types": "./src/picker-tui/style.d.ts",
+      "default": "./src/picker-tui/style.ts"
+    },
+    "./picker-tui/style.ts": {
+      "types": "./src/picker-tui/style.d.ts",
+      "default": "./src/picker-tui/style.ts"
+    },
+    "./picker-tui/terminal-caps": {
+      "types": "./src/picker-tui/terminal-caps.d.ts",
+      "default": "./src/picker-tui/terminal-caps.ts"
+    },
+    "./picker-tui/terminal-caps.ts": {
+      "types": "./src/picker-tui/terminal-caps.d.ts",
+      "default": "./src/picker-tui/terminal-caps.ts"
+    },
+    "./picker-tui/types": {
+      "types": "./src/picker-tui/types.d.ts",
+      "default": "./src/picker-tui/types.ts"
+    },
+    "./picker-tui/types.ts": {
+      "types": "./src/picker-tui/types.d.ts",
+      "default": "./src/picker-tui/types.ts"
+    },
+    "./session-daemon/channel-daemon": {
+      "types": "./src/session-daemon/channel-daemon.d.ts",
+      "default": "./src/session-daemon/channel-daemon.ts"
+    },
+    "./session-daemon/channel-daemon.ts": {
+      "types": "./src/session-daemon/channel-daemon.d.ts",
+      "default": "./src/session-daemon/channel-daemon.ts"
+    },
+    "./session-daemon/cli-kind": {
+      "types": "./src/session-daemon/cli-kind.d.ts",
+      "default": "./src/session-daemon/cli-kind.ts"
+    },
+    "./session-daemon/cli-kind.ts": {
+      "types": "./src/session-daemon/cli-kind.d.ts",
+      "default": "./src/session-daemon/cli-kind.ts"
+    },
+    "./session-daemon/close-tab": {
+      "types": "./src/session-daemon/close-tab.d.ts",
+      "default": "./src/session-daemon/close-tab.ts"
+    },
+    "./session-daemon/close-tab.ts": {
+      "types": "./src/session-daemon/close-tab.d.ts",
+      "default": "./src/session-daemon/close-tab.ts"
+    },
+    "./session-daemon/closed-tab-routes": {
+      "types": "./src/session-daemon/closed-tab-routes.d.ts",
+      "default": "./src/session-daemon/closed-tab-routes.ts"
+    },
+    "./session-daemon/closed-tab-routes.ts": {
+      "types": "./src/session-daemon/closed-tab-routes.d.ts",
+      "default": "./src/session-daemon/closed-tab-routes.ts"
+    },
+    "./session-daemon/codex-rollout-discovery": {
+      "types": "./src/session-daemon/codex-rollout-discovery.d.ts",
+      "default": "./src/session-daemon/codex-rollout-discovery.ts"
+    },
+    "./session-daemon/codex-rollout-discovery.ts": {
+      "types": "./src/session-daemon/codex-rollout-discovery.d.ts",
+      "default": "./src/session-daemon/codex-rollout-discovery.ts"
+    },
+    "./session-daemon/command-outcome": {
+      "types": "./src/session-daemon/command-outcome.d.ts",
+      "default": "./src/session-daemon/command-outcome.ts"
+    },
+    "./session-daemon/command-outcome.ts": {
+      "types": "./src/session-daemon/command-outcome.d.ts",
+      "default": "./src/session-daemon/command-outcome.ts"
+    },
+    "./session-daemon/daemon": {
+      "types": "./src/session-daemon/daemon.d.ts",
+      "default": "./src/session-daemon/daemon.ts"
+    },
+    "./session-daemon/daemon.ts": {
+      "types": "./src/session-daemon/daemon.d.ts",
+      "default": "./src/session-daemon/daemon.ts"
+    },
+    "./session-daemon/developer-seat-map": {
+      "types": "./src/session-daemon/developer-seat-map.d.ts",
+      "default": "./src/session-daemon/developer-seat-map.ts"
+    },
+    "./session-daemon/developer-seat-map.ts": {
+      "types": "./src/session-daemon/developer-seat-map.d.ts",
+      "default": "./src/session-daemon/developer-seat-map.ts"
+    },
+    "./session-daemon/fleet-lifecycle-routes": {
+      "types": "./src/session-daemon/fleet-lifecycle-routes.d.ts",
+      "default": "./src/session-daemon/fleet-lifecycle-routes.ts"
+    },
+    "./session-daemon/fleet-lifecycle-routes.ts": {
+      "types": "./src/session-daemon/fleet-lifecycle-routes.d.ts",
+      "default": "./src/session-daemon/fleet-lifecycle-routes.ts"
+    },
+    "./session-daemon/mock-module-restore": {
+      "types": "./src/session-daemon/mock-module-restore.d.ts",
+      "default": "./src/session-daemon/mock-module-restore.ts"
+    },
+    "./session-daemon/mock-module-restore.ts": {
+      "types": "./src/session-daemon/mock-module-restore.d.ts",
+      "default": "./src/session-daemon/mock-module-restore.ts"
+    },
+    "./session-daemon/picker-command-producer": {
+      "types": "./src/session-daemon/picker-command-producer.d.ts",
+      "default": "./src/session-daemon/picker-command-producer.ts"
+    },
+    "./session-daemon/picker-command-producer.ts": {
+      "types": "./src/session-daemon/picker-command-producer.d.ts",
+      "default": "./src/session-daemon/picker-command-producer.ts"
+    },
+    "./session-daemon/picker-data": {
+      "types": "./src/session-daemon/picker-data.d.ts",
+      "default": "./src/session-daemon/picker-data.ts"
+    },
+    "./session-daemon/picker-data.ts": {
+      "types": "./src/session-daemon/picker-data.d.ts",
+      "default": "./src/session-daemon/picker-data.ts"
+    },
+    "./session-daemon/picker-events": {
+      "types": "./src/session-daemon/picker-events.d.ts",
+      "default": "./src/session-daemon/picker-events.ts"
+    },
+    "./session-daemon/picker-events.ts": {
+      "types": "./src/session-daemon/picker-events.d.ts",
+      "default": "./src/session-daemon/picker-events.ts"
+    },
+    "./session-daemon/picker-home-window": {
+      "types": "./src/session-daemon/picker-home-window.d.ts",
+      "default": "./src/session-daemon/picker-home-window.ts"
+    },
+    "./session-daemon/picker-home-window.ts": {
+      "types": "./src/session-daemon/picker-home-window.d.ts",
+      "default": "./src/session-daemon/picker-home-window.ts"
+    },
+    "./session-daemon/prompt-delivery": {
+      "types": "./src/session-daemon/prompt-delivery.d.ts",
+      "default": "./src/session-daemon/prompt-delivery.ts"
+    },
+    "./session-daemon/prompt-delivery.ts": {
+      "types": "./src/session-daemon/prompt-delivery.d.ts",
+      "default": "./src/session-daemon/prompt-delivery.ts"
+    },
+    "./session-daemon/reconcile-all": {
+      "types": "./src/session-daemon/reconcile-all.d.ts",
+      "default": "./src/session-daemon/reconcile-all.ts"
+    },
+    "./session-daemon/reconcile-all.ts": {
+      "types": "./src/session-daemon/reconcile-all.d.ts",
+      "default": "./src/session-daemon/reconcile-all.ts"
+    },
+    "./session-daemon/reconcile-guard": {
+      "types": "./src/session-daemon/reconcile-guard.d.ts",
+      "default": "./src/session-daemon/reconcile-guard.ts"
+    },
+    "./session-daemon/reconcile-guard.ts": {
+      "types": "./src/session-daemon/reconcile-guard.d.ts",
+      "default": "./src/session-daemon/reconcile-guard.ts"
+    },
+    "./session-daemon/record-session-telemetry": {
+      "types": "./src/session-daemon/record-session-telemetry.d.ts",
+      "default": "./src/session-daemon/record-session-telemetry.ts"
+    },
+    "./session-daemon/record-session-telemetry.ts": {
+      "types": "./src/session-daemon/record-session-telemetry.d.ts",
+      "default": "./src/session-daemon/record-session-telemetry.ts"
+    },
+    "./session-daemon/register-cli-session": {
+      "types": "./src/session-daemon/register-cli-session.d.ts",
+      "default": "./src/session-daemon/register-cli-session.ts"
+    },
+    "./session-daemon/register-cli-session.ts": {
+      "types": "./src/session-daemon/register-cli-session.d.ts",
+      "default": "./src/session-daemon/register-cli-session.ts"
+    },
+    "./session-daemon/rekey-session-state": {
+      "types": "./src/session-daemon/rekey-session-state.d.ts",
+      "default": "./src/session-daemon/rekey-session-state.ts"
+    },
+    "./session-daemon/rekey-session-state.ts": {
+      "types": "./src/session-daemon/rekey-session-state.d.ts",
+      "default": "./src/session-daemon/rekey-session-state.ts"
+    },
+    "./session-daemon/resolve-primary-tmux-session": {
+      "types": "./src/session-daemon/resolve-primary-tmux-session.d.ts",
+      "default": "./src/session-daemon/resolve-primary-tmux-session.ts"
+    },
+    "./session-daemon/resolve-primary-tmux-session.ts": {
+      "types": "./src/session-daemon/resolve-primary-tmux-session.d.ts",
+      "default": "./src/session-daemon/resolve-primary-tmux-session.ts"
+    },
+    "./session-daemon/routes": {
+      "types": "./src/session-daemon/routes.d.ts",
+      "default": "./src/session-daemon/routes.ts"
+    },
+    "./session-daemon/routes.ts": {
+      "types": "./src/session-daemon/routes.d.ts",
+      "default": "./src/session-daemon/routes.ts"
+    },
+    "./session-daemon/runtime-tuning-env": {
+      "types": "./src/session-daemon/runtime-tuning-env.d.ts",
+      "default": "./src/session-daemon/runtime-tuning-env.ts"
+    },
+    "./session-daemon/runtime-tuning-env.ts": {
+      "types": "./src/session-daemon/runtime-tuning-env.d.ts",
+      "default": "./src/session-daemon/runtime-tuning-env.ts"
+    },
+    "./session-daemon/scope-kill": {
+      "types": "./src/session-daemon/scope-kill.d.ts",
+      "default": "./src/session-daemon/scope-kill.ts"
+    },
+    "./session-daemon/scope-kill.ts": {
+      "types": "./src/session-daemon/scope-kill.d.ts",
+      "default": "./src/session-daemon/scope-kill.ts"
+    },
+    "./session-daemon/secret-env": {
+      "types": "./src/session-daemon/secret-env.d.ts",
+      "default": "./src/session-daemon/secret-env.ts"
+    },
+    "./session-daemon/secret-env.ts": {
+      "types": "./src/session-daemon/secret-env.d.ts",
+      "default": "./src/session-daemon/secret-env.ts"
+    },
+    "./session-daemon/session-name": {
+      "types": "./src/session-daemon/session-name.d.ts",
+      "default": "./src/session-daemon/session-name.ts"
+    },
+    "./session-daemon/session-name.ts": {
+      "types": "./src/session-daemon/session-name.d.ts",
+      "default": "./src/session-daemon/session-name.ts"
+    },
+    "./session-daemon/show-menu": {
+      "types": "./src/session-daemon/show-menu.d.ts",
+      "default": "./src/session-daemon/show-menu.ts"
+    },
+    "./session-daemon/show-menu.ts": {
+      "types": "./src/session-daemon/show-menu.d.ts",
+      "default": "./src/session-daemon/show-menu.ts"
+    },
+    "./session-daemon/show-session-picker": {
+      "types": "./src/session-daemon/show-session-picker.d.ts",
+      "default": "./src/session-daemon/show-session-picker.ts"
+    },
+    "./session-daemon/show-session-picker.ts": {
+      "types": "./src/session-daemon/show-session-picker.d.ts",
+      "default": "./src/session-daemon/show-session-picker.ts"
+    },
+    "./session-daemon/sizing": {
+      "types": "./src/session-daemon/sizing.d.ts",
+      "default": "./src/session-daemon/sizing.ts"
+    },
+    "./session-daemon/sizing.ts": {
+      "types": "./src/session-daemon/sizing.d.ts",
+      "default": "./src/session-daemon/sizing.ts"
+    },
+    "./session-daemon/source-adapter-core": {
+      "types": "./src/session-daemon/source-adapter-core.d.ts",
+      "default": "./src/session-daemon/source-adapter-core.ts"
+    },
+    "./session-daemon/source-adapter-core.ts": {
+      "types": "./src/session-daemon/source-adapter-core.d.ts",
+      "default": "./src/session-daemon/source-adapter-core.ts"
+    },
+    "./session-daemon/spawn-core": {
+      "types": "./src/session-daemon/spawn-core.d.ts",
+      "default": "./src/session-daemon/spawn-core.ts"
+    },
+    "./session-daemon/spawn-core.ts": {
+      "types": "./src/session-daemon/spawn-core.d.ts",
+      "default": "./src/session-daemon/spawn-core.ts"
+    },
+    "./session-daemon/spawn-ops": {
+      "types": "./src/session-daemon/spawn-ops.d.ts",
+      "default": "./src/session-daemon/spawn-ops.ts"
+    },
+    "./session-daemon/spawn-ops.ts": {
+      "types": "./src/session-daemon/spawn-ops.d.ts",
+      "default": "./src/session-daemon/spawn-ops.ts"
+    },
+    "./session-daemon/spawn-preflight": {
+      "types": "./src/session-daemon/spawn-preflight.d.ts",
+      "default": "./src/session-daemon/spawn-preflight.ts"
+    },
+    "./session-daemon/spawn-preflight.ts": {
+      "types": "./src/session-daemon/spawn-preflight.d.ts",
+      "default": "./src/session-daemon/spawn-preflight.ts"
+    },
+    "./session-daemon/spawn-request": {
+      "types": "./src/session-daemon/spawn-request.d.ts",
+      "default": "./src/session-daemon/spawn-request.ts"
+    },
+    "./session-daemon/spawn-request.ts": {
+      "types": "./src/session-daemon/spawn-request.d.ts",
+      "default": "./src/session-daemon/spawn-request.ts"
+    },
+    "./session-daemon/spawn-request-schema": {
+      "types": "./src/session-daemon/spawn-request-schema.d.ts",
+      "default": "./src/session-daemon/spawn-request-schema.ts"
+    },
+    "./session-daemon/spawn-request-schema.ts": {
+      "types": "./src/session-daemon/spawn-request-schema.d.ts",
+      "default": "./src/session-daemon/spawn-request-schema.ts"
+    },
+    "./session-daemon/spawn-route-handler": {
+      "types": "./src/session-daemon/spawn-route-handler.d.ts",
+      "default": "./src/session-daemon/spawn-route-handler.ts"
+    },
+    "./session-daemon/spawn-route-handler.ts": {
+      "types": "./src/session-daemon/spawn-route-handler.d.ts",
+      "default": "./src/session-daemon/spawn-route-handler.ts"
+    },
+    "./session-daemon/spawn-route-policy": {
+      "types": "./src/session-daemon/spawn-route-policy.d.ts",
+      "default": "./src/session-daemon/spawn-route-policy.ts"
+    },
+    "./session-daemon/spawn-route-policy.ts": {
+      "types": "./src/session-daemon/spawn-route-policy.d.ts",
+      "default": "./src/session-daemon/spawn-route-policy.ts"
+    },
+    "./session-daemon/spawn-runtime-policy": {
+      "types": "./src/session-daemon/spawn-runtime-policy.d.ts",
+      "default": "./src/session-daemon/spawn-runtime-policy.ts"
+    },
+    "./session-daemon/spawn-runtime-policy.ts": {
+      "types": "./src/session-daemon/spawn-runtime-policy.d.ts",
+      "default": "./src/session-daemon/spawn-runtime-policy.ts"
+    },
+    "./session-daemon/state-config": {
+      "types": "./src/session-daemon/state-config.d.ts",
+      "default": "./src/session-daemon/state-config.ts"
+    },
+    "./session-daemon/state-config.ts": {
+      "types": "./src/session-daemon/state-config.d.ts",
+      "default": "./src/session-daemon/state-config.ts"
+    },
+    "./session-daemon/state-file": {
+      "types": "./src/session-daemon/state-file.d.ts",
+      "default": "./src/session-daemon/state-file.ts"
+    },
+    "./session-daemon/state-file.ts": {
+      "types": "./src/session-daemon/state-file.d.ts",
+      "default": "./src/session-daemon/state-file.ts"
+    },
+    "./session-daemon/state-tabs": {
+      "types": "./src/session-daemon/state-tabs.d.ts",
+      "default": "./src/session-daemon/state-tabs.ts"
+    },
+    "./session-daemon/state-tabs.ts": {
+      "types": "./src/session-daemon/state-tabs.d.ts",
+      "default": "./src/session-daemon/state-tabs.ts"
+    },
+    "./session-daemon/switch-model": {
+      "types": "./src/session-daemon/switch-model.d.ts",
+      "default": "./src/session-daemon/switch-model.ts"
+    },
+    "./session-daemon/switch-model.ts": {
+      "types": "./src/session-daemon/switch-model.d.ts",
+      "default": "./src/session-daemon/switch-model.ts"
+    },
+    "./session-daemon/switch-model-plan": {
+      "types": "./src/session-daemon/switch-model-plan.d.ts",
+      "default": "./src/session-daemon/switch-model-plan.ts"
+    },
+    "./session-daemon/switch-model-plan.ts": {
+      "types": "./src/session-daemon/switch-model-plan.d.ts",
+      "default": "./src/session-daemon/switch-model-plan.ts"
+    },
+    "./session-daemon/task-sync-client": {
+      "types": "./src/session-daemon/task-sync-client.d.ts",
+      "default": "./src/session-daemon/task-sync-client.ts"
+    },
+    "./session-daemon/task-sync-client.ts": {
+      "types": "./src/session-daemon/task-sync-client.d.ts",
+      "default": "./src/session-daemon/task-sync-client.ts"
+    },
+    "./session-daemon/tmux-env-hygiene": {
+      "types": "./src/session-daemon/tmux-env-hygiene.d.ts",
+      "default": "./src/session-daemon/tmux-env-hygiene.ts"
+    },
+    "./session-daemon/tmux-env-hygiene.ts": {
+      "types": "./src/session-daemon/tmux-env-hygiene.d.ts",
+      "default": "./src/session-daemon/tmux-env-hygiene.ts"
+    },
+    "./session-daemon/transcript-watcher": {
+      "types": "./src/session-daemon/transcript-watcher.d.ts",
+      "default": "./src/session-daemon/transcript-watcher.ts"
+    },
+    "./session-daemon/transcript-watcher.ts": {
+      "types": "./src/session-daemon/transcript-watcher.d.ts",
+      "default": "./src/session-daemon/transcript-watcher.ts"
+    },
+    "./session-daemon/turn-event-key": {
+      "types": "./src/session-daemon/turn-event-key.d.ts",
+      "default": "./src/session-daemon/turn-event-key.ts"
+    },
+    "./session-daemon/turn-event-key.ts": {
+      "types": "./src/session-daemon/turn-event-key.d.ts",
+      "default": "./src/session-daemon/turn-event-key.ts"
+    }
+  },
+  "repository": "https://github.com/teamgbg/bun-server-cli-session-daemon",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
